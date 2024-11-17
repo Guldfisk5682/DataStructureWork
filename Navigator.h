@@ -1,20 +1,19 @@
 #pragma once
 #include <iostream>
+#include <string>
+#define MaxSize 20
 
-template <typename T>
 class Navigator
 {
 public:
-    MGraph(T a[], int n, int e);    //å°†å¯¼æ¸¸å›¾ä¿¡æ¯å­˜å…¥ä¸€æ–‡ä»¶ä¸­ï¼Œç¨‹åºè¿è¡Œæ—¶å¯è‡ªåŠ¨è¯»å…¥æ–‡ä»¶å»ºç«‹ç›¸å…³æ•°æ®ç»“æ„
-    ~MGraph(){};                                         
-    void Floyd(int v);      // æœ€å°åŒ–è·¯å¾„ (è¾“å…¥ä¸¤ä¸ªæ™¯ç‚¹ï¼Œå°±å¯ä»¥å¾—åˆ°å…¶æœ€çŸ­çº¿è·¯)
-    void ShowInfo();
-    void Line(T place1,T place2);        //è¾“å…¥ä¸¤ä¸ªæ™¯ç‚¹ï¼Œå°±å¯ä»¥å¾—åˆ°å…¶æœ€çŸ­çº¿è·¯,æ˜¾ç¤ºçº¿è·¯æ—¶åº”åŒæ—¶æ˜¾ç¤ºè·¯å¾„é•¿åº¦
+    Navigator(); // ½«µ¼ÓÎÍ¼ĞÅÏ¢´æÈëÒ»ÎÄ¼şÖĞ£¬³ÌĞòÔËĞĞÊ±¿É×Ô¶¯¶ÁÈëÎÄ¼ş½¨Á¢Ïà¹ØÊı¾İ½á¹¹
+    ~Navigator() {};
+    void ShortestRoad(std::string place1, std::string place2); // ÊäÈëÁ½¸ö¾°µã£¬¾Í¿ÉÒÔµÃµ½Æä×î¶ÌÏßÂ·
+    void ShowInfo();                                           // Õ¹Ê¾Ñ§Ğ£ÄÚº¬ÓĞµÄµØµã
+    void ShowLine();                                           // ×Ô¶¯¸ø³ö´ÓÈë¿Úµ½³ö¿Ú²»ÖØ¸´ÓÎÀÀµÄÏßÂ·
 
 private:
-    T vertex[MaxSize];   
-    int edge[MaxSize][MaxSize]; 
-    int vertexNum, edgeNum;     
-
-    int MinEdge(int r[], int n); 
+    std::string vertex[MaxSize];
+    int edge[MaxSize][MaxSize];
+    int vertexNum, edgeNum;
 };
