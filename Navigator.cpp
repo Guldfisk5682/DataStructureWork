@@ -17,7 +17,7 @@ Navigator::Navigator()
 
     string line;
     vertexNum = 0;
-    edgeNum = 0;
+    edgeNum = 0;        
     unordered_map<string, int> places; // 通过哈希表去重
     while (getline(file, line))
     {
@@ -74,7 +74,7 @@ void Navigator::ShowInfo()
     {
         for (int j = 0; j < vertexNum; j++)
         {
-            if (edge[i][j] != 0 && edge[i][j] < 100 && i < j)
+            if (edge[i][j] > 0 && edge[i][j] < 100 && i < j)
             {
                 cout << vertex[i] << " 距离" << vertex[j] << " 有" << edge[i][j] << "米" << endl;
             }

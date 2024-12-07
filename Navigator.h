@@ -13,7 +13,8 @@ public:
     void ShowLine();                                           // 自动给出从入口到出口不重复游览的线路
 
 private:
+    int vertexNum;  
+    int edgeNum;    
     std::string vertex[MaxSize];
     int edge[MaxSize][MaxSize];
-    int vertexNum, edgeNum;
 };
