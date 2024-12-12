@@ -17,7 +17,7 @@ Navigator::Navigator()
 
     string line;
     vertexNum = 0;
-    edgeNum = 0;        
+    edgeNum = 0;
     unordered_map<string, int> places; // 通过哈希表去重
     while (getline(file, line))
     {
